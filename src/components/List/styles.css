@@ -1,0 +1,88 @@
+.list-container {
+    width: 100%;
+    height: 92%;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.list-container .empty {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(255, 163, 0, 0.29);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-container .item {
+    width: 100%;
+    background-color: #eeeeee;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 11px;
+    gap: 10px;
+}
+
+.list-container .item .value {
+    font-size: 14px;
+    width: 100%;
+    word-break: break-word;
+}
+
+.list-container .item.done__true {
+    background-color: rgba(0, 166, 227, 0.15);
+}
+
+.list-container .item.done__true .value {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.list-container .item.edit__mode {
+    background-color: rgba(0, 0, 0, 0.17);
+}
+
+.list-container .item .value input {
+    all: unset;
+    width: 100%;
+}
+
+.list-container .item .value .more {
+    cursor: pointer;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.list-container .item .value .more:hover {
+    opacity: 0.8;
+}
+
+.list-container .item .manipulation {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.list-container .item .manipulation img {
+    width: 14px;
+    transition: 200ms all;
+}
+
+.list-container .item .manipulation img:hover {
+    opacity: 0.5;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e3e3e3;
+}

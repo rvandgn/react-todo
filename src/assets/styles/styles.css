@@ -1,0 +1,44 @@
+:root {
+    --background-color-primary: #efefef;
+    --background-color-second: #ffffff;
+
+    --color-gray: #676767;
+    --color-blue: #00a6e3;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color-primary);
+    color: var(--color-gray);
+}
+
+.App {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App .container {
+    width: 550px;
+    height: 90vh;
+    background-color: var(--background-color-second);
+    border-radius: 10px;
+    padding: 25px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+@media (max-width: 580px) {
+    .App .container {
+        width: 100%;
+        height: 100%;
+    }
+}
